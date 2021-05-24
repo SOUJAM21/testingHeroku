@@ -3,6 +3,14 @@ from tkinter import messagebox
 from threading import Timer
 from tkinter import * 
 from time import sleep
+from flask import Flask
+
+my_app = Flask(__name__)
+
+
+@my_awesome_app.route('/yay')
+def hello_world():
+    return 'Hello World!'
 
 
 def loadingScreen(userInput):
