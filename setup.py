@@ -98,7 +98,7 @@ def displayTexts(beforeText,afterText,numCut,userInput):
     event, values = window.Read()
             
 
-
+@my_app.route('/')
 def homePage():
     layout = [[sg.Text('Transformer App')],[sg.Text('_________________')], 
     [sg.Text('This service searches scraped wiki text and transforms it into')], 
@@ -127,6 +127,7 @@ def homePage():
     event, values = window.Read()
 
 
+if __name__ == '__main__':
+    my_app.run()
 
-
-homePage()
+#homePage()
