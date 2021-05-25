@@ -5,6 +5,9 @@ from flask import Flask
 app = Flask(__name__)
 
 
+if __name__ == '__main__':
+    app.run()
+    
 @app.route('/yay')
 def hello_world():
     return 'Hello World!'
@@ -124,7 +127,6 @@ def homePage():
     event, values = window.Read()
 
 
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=80)
+
 
 #homePage()
