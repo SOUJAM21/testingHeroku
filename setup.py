@@ -1,14 +1,11 @@
 import PySimpleGUI as sg
-from tkinter import messagebox
-from threading import Timer
-from tkinter import * 
 from time import sleep
 from flask import Flask
 
-my_app = Flask(__name__)
+app = Flask(__name__)
 
 
-@my_app.route('/yay')
+@app.route('/yay')
 def hello_world():
     return 'Hello World!'
 
@@ -98,7 +95,7 @@ def displayTexts(beforeText,afterText,numCut,userInput):
     event, values = window.Read()
             
 
-@my_app.route('/')
+@app.route('/')
 def homePage():
     layout = [[sg.Text('Transformer App')],[sg.Text('_________________')], 
     [sg.Text('This service searches scraped wiki text and transforms it into')], 
@@ -128,6 +125,6 @@ def homePage():
 
 
 if __name__ == '__main__':
-    my_app.run()
+    app.run()
 
 #homePage()
